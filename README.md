@@ -1,0 +1,5 @@
+# はじめに
+
+本リポジトリは、指定したQiitaユーザーの投稿数とContributionsとフォロワー数を、毎月1日にSlackに通知するWeb APIをMicrosoft Azureで実現するためのOSSです。
+
+以上
