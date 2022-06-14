@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutputReportFunctionApp", "OutputReportFunctionApp\OutputReportFunctionApp.csproj", "{FEE07D7B-A984-4789-BE3A-D29367595D65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseRealtimeDatabaseService", "FirebaseRealtimeDatabaseService\FirebaseRealtimeDatabaseService.csproj", "{8DE03047-AE41-46B9-8922-001DE92AC75C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEE07D7B-A984-4789-BE3A-D29367595D65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE07D7B-A984-4789-BE3A-D29367595D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE07D7B-A984-4789-BE3A-D29367595D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE07D7B-A984-4789-BE3A-D29367595D65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE03047-AE41-46B9-8922-001DE92AC75C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE03047-AE41-46B9-8922-001DE92AC75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE03047-AE41-46B9-8922-001DE92AC75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE03047-AE41-46B9-8922-001DE92AC75C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CB62D9B-7DBE-4E81-BFCA-791F892CD0B4}
+	EndGlobalSection
+EndGlobal
