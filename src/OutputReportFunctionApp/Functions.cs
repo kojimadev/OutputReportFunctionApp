@@ -87,30 +87,33 @@ namespace OutputReportFunctionApp
                 var followerCountString = followerSubstring.Substring(0, followerStringLength);
                 int followerCount = int.Parse(followerCountString);
 
-                // Firebase から対象ユーザーのデータを取得し、今回のデータと前回のデータをメモリ上で更新する
+                // Firebase から対象ユーザーのデータを取得する
                 var firebaseService = GetFirebaseService();
                 var outputUser = await firebaseService.GetRecordAsync<OutputUser>("outputUsers", userName);
                 if (outputUser == null)
                 {
+                    // Firebase にデータが存在しなければ新規作成
                     outputUser = new OutputUser(userName);
                 }
+                // 今回の投稿数とContributionsとフォロワー数で対象ユーザーを更新して
+                // 対象ユーザーに前回と今回の差分を保持させる
                 outputUser.Update(articleCount, contributions, followerCount);
 
-                // Firebaseのデータも更新する
+                // 更新後のデータで Firebase に登録しなおす
                 await firebaseService.UpdateRecordAsync("outputUsers", userName, outputUser);
 
                 // 最後に通知するために、ユーザー情報をリストに登録しておく
                 outputUsers.Add(outputUser);
             }
 
-            // レポート用文字列を生成
+            // 対象ユーザーが複数名の場合に、ユーザーごとの結果を1つの文字列に結合する
             var builder = new StringBuilder();
             foreach (var outputUser in outputUsers)
             {
                 builder.AppendLine(outputUser.Report());
             }
 
-            // Slackに通知する
+            // 結合した文字列をSlackに投稿する
             var service = new SlackNotificationService();
             await service.Notify(builder.ToString(), _WebhookUrl, "OutputReport", "", false);
 
