@@ -34,12 +34,12 @@ namespace OutputReportFunctionApp
         public int PreviousQiitaArticleCount { get; set; }
 
         /// <summary>
-        /// QiitaのContributors
+        /// QiitaのContributions
         /// </summary>
         public int QiitaContributions { get; set; }
 
         /// <summary>
-        /// 前回のQiitaのContributors
+        /// 前回のQiitaのContributions
         /// </summary>
         public int PreviousQiitaContributions { get; set; }
 
